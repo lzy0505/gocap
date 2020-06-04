@@ -6,7 +6,7 @@ import (
 	"io/ioutil"
 	"unicode/utf8"
 
-	"github.com/nfk93/gocap/parser/simple/token"
+	"github.com/lzy0505/gocap/parser/simple/token"
 )
 
 const (

@@ -2,7 +2,7 @@
 
 package parser
 
-import "github.com/nfk93/gocap/parser/simple/ast"
+import "github.com/lzy0505/gocap/parser/simple/ast"
    import "errors"
 
 type (

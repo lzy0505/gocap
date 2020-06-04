@@ -7,10 +7,10 @@ import (
   // "os"
   // "strings"
 
-  "github.com/nfk93/gocap/parser/simple/ast"
-	"github.com/nfk93/gocap/parser/simple/lexer"
-	"github.com/nfk93/gocap/parser/simple/parser"
-	"github.com/nfk93/gocap/parser/simple/analysis"
+  "github.com/lzy0505/gocap/parser/simple/ast"
+	"github.com/lzy0505/gocap/parser/simple/lexer"
+	"github.com/lzy0505/gocap/parser/simple/parser"
+	"github.com/lzy0505/gocap/parser/simple/analysis"
 )
 
 func TestAllGood(t *testing.T) {

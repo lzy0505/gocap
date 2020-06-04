@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"strings"
 
-	parseError "github.com/nfk93/gocap/parser/simple/errors"
-	"github.com/nfk93/gocap/parser/simple/token"
+	parseError "github.com/lzy0505/gocap/parser/simple/errors"
+	"github.com/lzy0505/gocap/parser/simple/token"
 )
 
 const (

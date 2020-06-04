@@ -7,8 +7,8 @@ import (
 	"unicode"
 
 	im "github.com/benbjohnson/immutable"
-	"github.com/nfk93/gocap/generator"
-	. "github.com/nfk93/gocap/parser/simple/ast"
+	"github.com/lzy0505/gocap/generator"
+	. "github.com/lzy0505/gocap/parser/simple/ast"
 )
 
 func AnalyzeTypes(s SourceFile) error {

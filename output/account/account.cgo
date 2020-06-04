@@ -1,0 +1,49 @@
+package account
+
+import ("fmt"
+	"time"
+)
+
+type Account struct {
+	money int
+	writable int
+}
+
+func NewAccount(i int,flag int) *Account{
+    return &Account{i,flag}
+}
+
+func (v *Account) SendAndRevoke(c capchan *Account) {
+	v.unfreeze()
+	c<--v
+	time.Sleep(500*time.Microsecond)
+	v.freeze()
+	fmt.Println("Revoked")
+}
+
+func (v *Account) ReceiveAndWithdraw(c capchan *Account)  {
+	B := <--c
+    fmt.Println("value of B.money before withdrawing:", B.query())
+	B.withdraw(42)
+	fmt.Println("value of B.money after withdrawing 42:", B.query())
+	time.Sleep(1000 * time.Microsecond)
+	B.withdraw(5)
+	fmt.Println("value of B.money after revocation:", B.query())
+}
+
+func (v *Account) query () int{
+	return v.money
+}
+
+func (v *Account) withdraw (x int) {
+	if v.writable>0 && v.money>=x {
+		v.money-=x
+	}
+}
+func (v *Account) unfreeze (){
+	v.writable=1
+}
+
+func (v *Account) freeze (){
+	v.writable=0
+}

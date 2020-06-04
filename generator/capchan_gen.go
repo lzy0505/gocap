@@ -5,7 +5,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/nfk93/gocap/utils"
+	"github.com/lzy0505/gocap/utils"
 )
 
 type Attrib interface{}
@@ -127,10 +127,8 @@ func MakeNewCapChannelTypeInline(packageString, typeString, receiverString strin
 
 	_, ok := CapChanTypeMap[packageString]
 	if ok {
-		fmt.Println("AAA")
 		CapChanTypeMap[packageString] = append(CapChanTypeMap[packageString], typeString)
 	} else {
-		fmt.Println("BBB")
 		arr := make([]string, 0)
 		CapChanTypeMap[packageString] = append(arr, typeString)
 	}
@@ -160,7 +158,6 @@ func CreateFile(data string, filepath string) {
 
 func CreateFileCode(packag string, data string, filepath string) {
 	typeArr, ok := CapChanTypeMap[packag]
-	fmt.Println("CCC", typeArr)
 	if ok {
 		for _, typeString := range typeArr {
 			typeStringU := utils.RemoveParentheses(typeString)

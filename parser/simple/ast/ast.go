@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/nfk93/gocap/generator"
-	"github.com/nfk93/gocap/parser/simple/token"
+	"github.com/lzy0505/gocap/generator"
+	"github.com/lzy0505/gocap/parser/simple/token"
 )
 
 type Attrib interface{}
@@ -228,7 +228,7 @@ func NewImport(path Attrib, dot bool) (Import, error) {
 	return Import{p, alias, dot}, nil
 }
 
-func NewNamedImport(alias_, path_ Attrib) (Import, error) {
+func NewNamedImport(path_, alias_ Attrib) (Import, error) {
 	path := parseString(path_)
 	alias := parseId(alias_)
 	return Import{path, alias, false}, nil

@@ -4,9 +4,9 @@ import (
 	"strings"
 	"unicode"
 
-	"github.com/nfk93/gocap/generator"
+	"github.com/lzy0505/gocap/generator"
 
-	"github.com/nfk93/gocap/utils"
+	"github.com/lzy0505/gocap/utils"
 )
 
 type Typ interface {

@@ -1,17 +1,17 @@
 package main
 
 import ("time"
-	"github.com/nfk93/gocap/output/integer"
-	"github.com/nfk93/gocap/output/capchan"
+	"github.com/lzy0505/gocap/output/account"
+	"github.com/lzy0505/gocap/output/capchan"
 )
 
 func main() {
-	B:=integer.NewInteger(7,0)
-	C:=integer.NewInteger(0,0)
-	c:=make(capchan *integer.Integer)
+	B:=account.NewAccount(100,0)
+	C:=account.NewAccount(0,0)
+	c:=make(capchan *account.Account)
 	c<+-B
 	c<+-C
-	go B.Sendcaretaker(c)
-	go C.Receivecaretaker(c)
+	go B.SendAndRevoke(c)
+	go C.ReceiveAndWithdraw(c)
 	time.Sleep(3000*time.Microsecond)
 }

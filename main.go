@@ -7,11 +7,11 @@ import (
 	"path"
 	"path/filepath"
 
-	"github.com/nfk93/gocap/generator"
-	"github.com/nfk93/gocap/parser/simple/analysis"
-	"github.com/nfk93/gocap/parser/simple/ast"
-	"github.com/nfk93/gocap/parser/simple/lexer"
-	"github.com/nfk93/gocap/parser/simple/parser"
+	"github.com/lzy0505/gocap/generator"
+	"github.com/lzy0505/gocap/parser/simple/analysis"
+	"github.com/lzy0505/gocap/parser/simple/ast"
+	"github.com/lzy0505/gocap/parser/simple/lexer"
+	"github.com/lzy0505/gocap/parser/simple/parser"
 )
 
 //path to executable
